@@ -1,0 +1,19 @@
+{
+  "name": "steam-profile-viewer",
+  "version": "1.0.0",
+  "description": "With this app user can search Steam profiles and display information about them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mekyi/steam-profile-viewer.git"
+  },
+  "author": "Mekyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mekyi/steam-profile-viewer/issues"
+  },
+  "homepage": "https://github.com/Mekyi/steam-profile-viewer#readme"
+}

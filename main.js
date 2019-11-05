@@ -1,1 +1,1 @@
-nw.Window.open('index.htmlä', {}, function(win) {});
+nw.Window.open('index.html', {}, function(win) {});

@@ -1,10 +1,22 @@
-// Test file mocha
+var chai = require('chai');
+var app = require('../main.js');
 
-var assert = require('assert');
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
+global.app = app;
+global.expect = chai.expect;
+global.request = supertest(app);
+
+var input;
+
+// Tests if input in name field is valid
+describe('Input validation', function() {
+  it('checks input validity', function() {
+    input = 'name1'
+    expect(sampleFunction(input)).to.be.true;
+    input = 'name2'
+    expect(sampleFunction(input)).to.be.false;
     });
   });
-});
+
+// Test if we are getting something
+
+// Tests if we are getting correct information from API

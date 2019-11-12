@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Mekyi/steam-profile-viewer#readme",
   "dependencies": {
+    "boostrap": "^2.0.0",
+    "jquery": "^3.4.1",
     "nwjs": "^1.4.4"
   },
   "devDependencies": {

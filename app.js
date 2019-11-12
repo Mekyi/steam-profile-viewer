@@ -23,7 +23,7 @@ app.post('/', (req, res) => {
         })
     }
     else {
-        request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + res.body.steamid, function (error, response, body) {
+        request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + req.body.steamid, function (error, response, body) {
             res.send(body)
         })
     }

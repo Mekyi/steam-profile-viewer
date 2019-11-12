@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "jsdoc": "^3.6.3",
-    "mocha": "^6.2.2"
+    "mocha": "^6.2.2",
+    "nw-builder": "^3.5.7"
   }
 }

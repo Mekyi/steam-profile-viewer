@@ -2,11 +2,41 @@
 <html>
   <head>
     <title>Steam Profile Viewer</title>
+
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
   </head>
   <body>
-    <h1>Hello World!</h1>
-    <div class="alert alert-primary" role="alert">
-      A simple primary alert—check it out!
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Active</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="row">
+
+      </div>
+      <h1>Steam Profile Information Viewer</h1>
+      
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        <button type="button" class="btn btn-secondary btn-lg">Search</button>
+      </div>
     </div>
   </body>
+    
+  <script>
+  </script>
 </html>

@@ -19,18 +19,32 @@
     <div class="container">
       <div class="row">
 
+        <h1 class="mx-auto">Steam Profile Information Viewer</h1>
       </div>
-      <h1>Steam Profile Information Viewer</h1>
       
       <div class="form-group input-group mb-3">
         <div class="form group input-group-prepend">
           <span class="input-group-text" id="basic-addon1">@</span>
         </div>
           <input id="username-input" type="text" class="form-control" placeholder="Username/ID" aria-label="Username" aria-describedby="basic-addon1">
-          <button class="btn btn-secondary btn-lg">Search</button>
+          <button id="search" class="btn btn-secondary btn-lg">Search</button>
         </div>
       </div>
-      <div id="content"></div>
+      <div id="content" class="container">
+        <table id="game-table" class="table table-light" style="display: none;">
+          <thead class="thead-dark">
+            <tr>
+              <th id="game-table-id" scope="col">ID</th>
+              <th id="game-table-title" scope="col">Game Title</th>
+              <th id="game-table-time"scope="col">Game Time</th>
+              <th id="game-table-store"scope="col">Store Page</th>
+            </tr>
+          </thead>
+          <tbody id="game-table-body">
+            
+          </tbody>
+        </table>
+      </div>
       
       <script src="src/jquery-3.4.1.min.js"></script>
       <script src="app.js"></script>

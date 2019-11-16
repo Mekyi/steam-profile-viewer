@@ -15,18 +15,24 @@ let isNum = function(str) {
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'))
 
-app.post('/', (req, res) => {
+app.get('/AppList', (req, res) => {
+    request(BASE_URL + '/ISteamApps/GetAppList/v0002/?key=' + API_KEY, (error, response, body) => {
+        res.send(body);
+    })
+});
+
+app.post('/OwnedGames', (req, res) => {
     if(!isNum(req.body.steamid)) {
-        request(BASE_URL + '/ISteamUser/ResolveVanityURL/v1/?key=' + API_KEY + '&vanityurl=' + req.body.steamid, function(error, response, body) {
+        request(BASE_URL + '/ISteamUser/ResolveVanityURL/v1/?key=' + API_KEY + '&vanityurl=' + req.body.steamid, (error, response, body) => {
             let json = JSON.parse(body)
             let id = json['response']['steamid']
-            request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + id, function (error, response, body) {
+            request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + id, (error, response, body) => {
                 res.send(body)
             })
         })
     }
     else {
-        request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + req.body.steamid, function (error, response, body) {
+        request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + req.body.steamid, (error, response, body) => {
             res.send(body)
         })
     }

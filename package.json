@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "With this app user can search Steam profiles and display information about them.",
   "main": "index.html",
+  "bg-script": "./app.js",
+  "node-main": "localhost:3000",
   "window": {
+    "width": 1600,
+    "height": 900,
     "toolbar": false
   },
   "scripts": {
@@ -22,17 +26,20 @@
   "homepage": "https://github.com/Mekyi/steam-profile-viewer#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "boostrap": "^2.0.0",
+    "bootstrap": "^4.3.1",
     "chai": "^4.2.0",
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "jquery": "^3.4.1",
     "nwjs": "^1.4.4",
+    "popper.js": "^1.16.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
     "jsdoc": "^3.6.3",
     "mocha": "^6.2.2",
+    "nodemon": "^1.19.4",
     "nw-builder": "^3.5.7"
   }
 }

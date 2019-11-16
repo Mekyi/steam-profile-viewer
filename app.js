@@ -1,6 +1,5 @@
 require('dotenv').config()
 
-const $ = require('jquery')
 const express = require('express')
 const app = express()
 const port = 3000
@@ -15,6 +14,7 @@ let isNum = function(str) {
 }
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'))
+
 app.post('/', (req, res) => {
     if(!isNum(req.body.steamid)) {
         request(BASE_URL + '/ISteamUser/ResolveVanityURL/v1/?key=' + API_KEY + '&vanityurl=' + req.body.steamid, function(error, response, body) {

@@ -18,7 +18,6 @@
     </ul>
     <div class="container">
       <div class="row">
-
         <h1 class="mx-auto">Steam Profile Information Viewer</h1>
       </div>
       
@@ -31,13 +30,16 @@
         </div>
       </div>
       <div id="content" class="container">
+        <div id="alerts">
+
+        </div>
         <table id="game-table" class="table table-light" style="display: none;">
           <thead class="thead-dark">
             <tr>
               <th id="game-table-id" scope="col">ID</th>
               <th id="game-table-title" scope="col">Game Title</th>
               <th id="game-table-time"scope="col">Game Time</th>
-              <th id="game-table-store"scope="col">Store Page</th>
+              <th id="game-table-store"scope="col">Links</th>
             </tr>
           </thead>
           <tbody id="game-table-body">
@@ -45,8 +47,9 @@
           </tbody>
         </table>
       </div>
-      
+    </div>
       <script src="src/jquery-3.4.1.min.js"></script>
+      <script src="src/bootstrap.min.js"></script>
       <script src="app.js"></script>
       <script src="index.js"></script>
   </body>

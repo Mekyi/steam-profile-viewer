@@ -12,7 +12,8 @@
   },
   "scripts": {
     "test": "mocha",
-    "start": "nw.exe ."
+    "start": "nw.exe .",
+    "doc": "jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",

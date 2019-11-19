@@ -1,5 +1,5 @@
 /**
- * @file NWjs file that is run first when project is compiled
+ * @file NWjs file is run first when project is compiled
  */
 
 var bodyParser = require('body-parser');

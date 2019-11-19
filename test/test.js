@@ -7,9 +7,9 @@ var app = require('../app.js');
 
 //functions = new Functions();
 
-global.app = app;
+global.app = app.App;
 global.expect = chai.expect;
-global.request = supertest(app);
+global.request = supertest(app.App);
 
 var input;
 
@@ -24,12 +24,12 @@ describe('Input validation', function() {
   });
 
 // Test if we are getting something
-describe('GET /tasks', function() {
-  it('returns a list of tasks', function(done) {
-      request.get('/tasks')
+describe('GET /test', function() {
+  it('tests if server works', function(done) {
+      request.get('/test')
           .expect(200)
           .end(function(err, res) {
-              expect(res.body).to.have.lengthOf(2);
+              //expect(res.body).to.have.lengthOf(6);
               done(err);
           });
   });

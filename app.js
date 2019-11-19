@@ -21,6 +21,10 @@ app.get('/AppList', (req, res) => {
     })
 });
 
+app.get('/test', (req, res) => {
+    res.send('Success');
+});
+
 app.post('/OwnedGames', (req, res) => {
     if(!isNum(req.body.steamid)) {
         request(BASE_URL + '/ISteamUser/ResolveVanityURL/v1/?key=' + API_KEY + '&vanityurl=' + req.body.steamid, (error, response, body) => {
@@ -51,5 +55,6 @@ app.post('/OwnedGames', (req, res) => {
     connect();
 
     module.exports.Connect = connect;
+    module.exports.App = app;
 
 

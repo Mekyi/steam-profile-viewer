@@ -1,6 +1,11 @@
 var chai = require('chai');
-var app = require('../main.js');
+// * as ClientFunctions from '../index.js';
+//var ClientFunctions = require('../index.js');
+//var app = require('../index.js');
 var supertest = require('supertest');
+var app = require('../app.js');
+
+//functions = new Functions();
 
 global.app = app;
 global.expect = chai.expect;
@@ -30,5 +35,34 @@ describe('GET /tasks', function() {
   });
 });
 
+// Testing the post task expecting status 201 of success
+describe('POST /tasks', function() {
+  it('saves a new task', function(done) {
+      request.post('/tasks')
+          .send({
+              title: 'run',
+              content: 'this is a test',
+              done: false
+          })
+          .expect(201)
+          .end(function(err, res) {
+              done(err);
+          });
+  });
+});
+
+describe('Function testing', function() {
+  it('tests function', function() {
+    expect(ClientFunctions.testFunction()).to.be.true;
+    });
+  });
+
+  class Functions{
+    testFunction(){
+        return true;
+    }
+  }
+  
+  module.exports = Functions;
 
 // Tests if we are getting correct information from API

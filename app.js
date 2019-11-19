@@ -42,4 +42,14 @@ app.post('/OwnedGames', (req, res) => {
     /*request(BASE_URL + '/IPlayerService/GetOwnedGames/v0001/?key=' + API_KEY + '&steamid=' + req.body.steamid, function (error, response, body) {
         res.send(body)
     })*/})
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+    function connect(){
+        app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+    }
+
+    
+    connect();
+
+    module.exports.Connect = connect;
+
+

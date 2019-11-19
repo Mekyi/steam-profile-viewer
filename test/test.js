@@ -1,29 +1,32 @@
 var chai = require('chai');
-// * as ClientFunctions from '../index.js';
-//var ClientFunctions = require('../index.js');
-//var app = require('../index.js');
 var supertest = require('supertest');
 var app = require('../app.js');
+var Functions = require('../functions.js');
 
-//functions = new Functions();
+functions = new Functions();
 
 global.app = app.App;
 global.expect = chai.expect;
 global.request = supertest(app.App);
 
-var input;
-
-// Tests if input in name field is valid
-describe('Input validation', function() {
-  it('checks input validity', function() {
-    input = 'name1'
-    expect(sampleFunction(input)).to.be.true;
-    input = 'name2'
-    expect(sampleFunction(input)).to.be.false;
-    });
+/**
+* Tests if API key exists
+*/
+describe('API key', function() {
+  it('tests if API key exists', function() {
+    var isTrue = true;
+    if (app.Key != null){
+      isTrue = true
+    }
+    else{isTrue = false}
+    expect(isTrue).to.be.true;
+    
   });
+});
 
-// Test if we are getting something
+/**
+* Tests if server works
+*/ 
 describe('GET /test', function() {
   it('tests if server works', function(done) {
       request.get('/test')
@@ -35,34 +38,71 @@ describe('GET /test', function() {
   });
 });
 
-// Testing the post task expecting status 201 of success
-describe('POST /tasks', function() {
-  it('saves a new task', function(done) {
-      request.post('/tasks')
+/**
+* Tests if trasforming custom profile url to steam ID works
+*/ 
+describe('POST /test', function() {
+  it('check if trasforming custom profile url to steam ID works', function(done) {
+    var res1;
+    var res2;
+      request.post('/OwnedGames')
           .send({
-              title: 'run',
-              content: 'this is a test',
+              'steamid':'76561198036256662'
+          })
+          .expect(200)
+          .end(function(err, res) {
+            res1 = res;
+          });
+      request.post('/OwnedGames')
+          .send({
+              'steamid':'Mekyi',
               done: false
           })
-          .expect(201)
+          .expect(200)
           .end(function(err, res) {
+            res2 = res;
               done(err);
           });
+      expect(res1 === res2).to.be.true;
   });
 });
 
-describe('Function testing', function() {
-  it('tests function', function() {
-    expect(ClientFunctions.testFunction()).to.be.true;
+/**
+ * Tests if JSON parsing success works
+ */
+describe('JSON parsing true', function() {
+  it('tests if JSON parsing success works', function() {
+    var json = '{"result":true, "count":42}';
+    expect(functions.tryParseJSON(json)).to.be.an('object');
     });
   });
 
-  class Functions{
-    testFunction(){
-        return true;
-    }
-  }
-  
-  module.exports = Functions;
+/**
+ * Tests if JSON parsing fail works
+ */
+describe('JSON parsing false', function() {
+  it('tests if JSON parsing fail works', function() {
+    var json = '{"result":true, "count":42}';
+    expect(functions.tryParseJSON(true)).to.be.false;
+    });
+  });
 
-// Tests if we are getting correct information from API
+/**
+ * Tests if converting playtime to hours works
+ */
+describe('Playtime conversion', function() {
+  it('tests if converting playtime to hours works', function() {
+    var result = functions.playTimeToHours(210);
+    expect(result).to.equal('3.5');
+    });
+  });
+
+/**
+ * Tests if isNum function works
+ */
+describe('isNum function', function() {
+  it('tests if isNum works', function() {
+    expect(app.Num(5)).to.be.true;
+    expect(app.Num("string")).to.be.false;
+    });
+  });

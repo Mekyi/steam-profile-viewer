@@ -32,7 +32,7 @@ npm run doc
 
 ## Tests
 
-TODO: Info
+Tests are using Mocha and Chai testing frameworks. Tests are ran by using this command.
 
 ```npm
 npm run test

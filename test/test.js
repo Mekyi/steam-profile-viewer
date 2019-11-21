@@ -16,9 +16,9 @@ describe('API key', function() {
   it('tests if API key exists', function() {
     var isTrue = true;
     if (app.Key != null){
-      isTrue = true
+      isTrue = false
     }
-    else{isTrue = false}
+    else{isTrue = true}
     expect(isTrue).to.be.true;
     
   });

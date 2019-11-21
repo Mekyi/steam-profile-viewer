@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const port = 3000
 const request = require('request')
-const API_KEY = process.env.API_KEY; // PROBABLY A GOOD IDEA TO KEEP IT PRIVATE
+const API_KEY = "59C8C53A6FA37277F93D40CB1C9051AA" // PROBABLY A GOOD IDEA TO KEEP IT PRIVATE
 const BASE_URL = 'https://api.steampowered.com'
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))

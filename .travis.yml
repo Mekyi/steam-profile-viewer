@@ -3,10 +3,16 @@ sudo: false
 language: node_js
 
 node_js:
-  - node
+- node
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_0a6446eb3ae3_key -iv $encrypted_0a6446eb3ae3_iv -in .env.enc -out .env -d
 
 install:
-  - npm ci
+- npm ci
 
 script:
-  - npm test
+- npm test
+env:
+  global:
+    secure: cfjphBNu64eCqrTUMHMEyUzp60gvHfR5oRvvhOYG0sUZKU6cst7oxuxr8o0pqjxfJs87SdfFnqRfNTD6JFRK/7noSimhe07+Ngoeegr/Xngo4bPbZx6N/37h4pKNgcrDir4hZ/utCB2ZCOovEdPFvqOY/3XP6ty2eAPX6azHK7dmJUCCto3RQVxbdtfkOtRjJdfeuH2cGaiwMKmskdiS7Rgtk34hMebbaTjAlcW3NEJzQzZQhfgP+wkll/FVKK/++QvGjTUISCjq0ysrsty0nOVaE6X0ag4BDlcBD4AX1wqVHUr2mU1YrPvBw5qNEl9zsBpehYitqtamaNw6ADbRVPp1qCkBSKa7POwFP26ixQZ5Q/a6904S88eSm+wOEJoUVFInV1vVpCC1s7/djmx6hfKXfluCKM8XlnKxGiVFPhLkTK8Y3VdMWxiwp47fraBtxQb/E0WKdaROc3XlmXN65Ata1R/d39CoT92NUSU4aep/AvVWYbz5R0Y8MGtq+jQN4euiVSu6l14qz7s+naFKPNvug9JJFB9wxITBc+CY7Tl4q49ybp+n4NJmmeXLMGmvfjxb/LfXGffJDvLjE94dXl8gELT5Hh/buG2FNgbdoB7d+0Kz6By+DBTonSNpSzVEkmTcwcBog1n4BzWX0osrGrPoWOpMpMLbHH4tWnjt5aI=

@@ -105,3 +105,5 @@ describe('isNum function', function() {
     expect(app.Num("string")).to.be.false;
   });
 });
+
+app.Close();

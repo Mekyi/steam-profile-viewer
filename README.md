@@ -5,7 +5,7 @@ This is an application for searching public steam profiles and viewing informati
 ## Running dev build
 
 1. Install dependencies with `npm install` or `npm ci` command.
-2. Download [NWjs](https://nwjs.io/) and extract it somewhere. Then add the location in path system variables.
+2. Download [NWjs](https://nwjs.io/) and extract it somewhere. Then add the location in path system variables (optional).
 3. Run NWjs with `nw .` or `npm run start` or `F5` in NWjs debug mode (requires [debugger extension](#debugging)) OR run it using the absolute path, for example `C:\Users\User\Downloads\nwjs-v0.42.2-win-x64\nw.exe .`.
 
 ## API key

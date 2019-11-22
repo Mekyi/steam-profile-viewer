@@ -12,6 +12,7 @@
   },
   "scripts": {
     "test": "mocha",
+    "test-report": "mocha test/test.js --reporter mocha-simple-html-reporter --reporter-options output=report.html",
     "start": "nw.exe .",
     "doc": "jsdoc -c jsdoc.json"
   },
@@ -37,6 +38,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "concurrently": "^5.0.0",
     "dotenv": "^8.2.0",
     "jsdoc": "^3.6.3",
     "mocha": "^6.2.2",

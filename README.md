@@ -37,3 +37,8 @@ Tests are using Mocha and Chai testing frameworks. Tests are ran by using this c
 ```npm
 npm run test
 ```
+And test report is written to a HTML file report.html with this command
+
+```npm
+npm run test-report
+```

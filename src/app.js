@@ -1,3 +1,6 @@
+/**
+ * @file app.js is for running express server that handles API requests from Steam
+ */
 require('dotenv').config()
 
 const express = require('express')
@@ -60,8 +63,8 @@ app.post('/OwnedGames', (req, res) => {
     }
 })
 
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
 module.exports.App = app;
 module.exports.Key = API_KEY;
 module.exports.Num = isNum;
-
-

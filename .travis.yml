@@ -2,8 +2,6 @@ sudo: false
 language: node_js
 node_js:
 - node
-before_install:
-- openssl aes-256-cbc -K $encrypted_f6331e209862_key -iv $encrypted_f6331e209862_iv -in .env.enc -out .env -d
 install:
 - npm ci
 script:

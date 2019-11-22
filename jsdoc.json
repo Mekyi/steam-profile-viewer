@@ -1,6 +1,6 @@
 {
   "source": {
-    "include": ["src", "app.js", "index.js"],
+    "include": ["src", "main.js", "test/test.js"],
     "includePattern": ".js$",
     "excludePattern": "(node_modules/|docs)"
   },
@@ -12,6 +12,7 @@
   "opts": {
     "recurse": true,
     "destination": "./docs/",
-    "readme": "./readme.md"
+    "readme": "./readme.md",
+    "report": "./report.html"
   }
 }

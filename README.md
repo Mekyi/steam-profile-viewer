@@ -32,13 +32,24 @@ npm run doc
 
 ## Tests
 
-Tests are using Mocha and Chai testing frameworks. Tests are ran by using this command.
+Tests are using Mocha and Chai testing frameworks. Tests are run by using command
 
 ```npm
 npm run test
 ```
-And test report is written to a HTML file report.html with this command
+
+and test report is written to a HTML file report.html with this command
 
 ```npm
 npm run test-report
 ```
+
+## Build
+
+Build executable using
+
+```npm
+npm run build
+```
+
+Build app can be found in build folder.

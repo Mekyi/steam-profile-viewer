@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "With this app user can search Steam profiles and display information about them.",
   "main": "index.html",
-  "bg-script": "./app.js",
+  "bg-script": "./src/app.js",
   "node-main": "localhost:3000",
   "window": {
     "width": 1600,
@@ -14,7 +14,8 @@
     "test": "mocha",
     "test-report": "mocha test/test.js --reporter mocha-simple-html-reporter --reporter-options output=report.html",
     "start": "nw.exe .",
-    "doc": "jsdoc -c jsdoc.json"
+    "doc": "jsdoc -c jsdoc.json",
+    "build": "nwbuild ."
   },
   "repository": {
     "type": "git",

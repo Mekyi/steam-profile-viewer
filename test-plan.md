@@ -8,7 +8,7 @@ The purpose of the tests is to test the basic functionality of the application w
 
 ## References
 
-Project plan: https://docs.google.com/document/d/1YUHkZ1cljgNH3g1e-GT-_Ue2bc_ffUn24NqN_fgtu8c/edit?usp=sharing
+[Project plan](https://docs.google.com/document/d/1YUHkZ1cljgNH3g1e-GT-_Ue2bc_ffUn24NqN_fgtu8c/edit?usp=sharing)
 
 ## Test Items
 
@@ -58,4 +58,3 @@ Dev-dependencies:
     "nodemon": "^1.19.4",
     "nw-builder": "^3.5.7",
     "supertest": "^4.0.2"
-

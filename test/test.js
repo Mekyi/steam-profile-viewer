@@ -32,6 +32,7 @@ describe('GET /test', function() {
         .expect(200)
         .end(function(err, res) {
             done(err);
+            app.CloseServer();
     });
   });
 });

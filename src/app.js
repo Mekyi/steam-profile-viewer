@@ -63,8 +63,12 @@ app.post('/OwnedGames', (req, res) => {
     }
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+var server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
+let closeServer = function() {
+    server.close();
+}
 module.exports.App = app;
 module.exports.Key = API_KEY;
 module.exports.Num = isNum;
+module.exports.CloseServer = closeServer;

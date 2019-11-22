@@ -1,12 +1,12 @@
 # Steam Profile Viewer
 
-TODO: Description
+This is an application for searching public steam profiles and viewing information about their games. Searching can be done using a custom steam URL or a steam user ID.
 
 ## Running dev build
 
 1. Install dependencies with `npm install` or `npm ci` command.
-2. Download [NWjs](https://nwjs.io/) and extract it somewhere. Then add the location in path system variables.
-3. Run NWjs with `nw .` or `npm run start` or `F5` in NWjs debug mode (requires [debugger extension](#debugging)).
+2. Download [NWjs](https://nwjs.io/) and extract it somewhere. Then add the location in path system variables (optional).
+3. Run NWjs with `nw .` or `npm run start` or `F5` in NWjs debug mode (requires [debugger extension](#debugging)) OR run it using the absolute path, for example `C:\Users\User\Downloads\nwjs-v0.42.2-win-x64\nw.exe .`.
 
 ## API key
 
@@ -32,8 +32,13 @@ npm run doc
 
 ## Tests
 
-TODO: Info
+Tests are using Mocha and Chai testing frameworks. Tests are ran by using this command.
 
 ```npm
 npm run test
+```
+And test report is written to a HTML file report.html with this command
+
+```npm
+npm run test-report
 ```

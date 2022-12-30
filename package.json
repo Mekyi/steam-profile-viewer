@@ -43,7 +43,7 @@
     "concurrently": "^5.0.0",
     "dotenv": "^8.2.0",
     "jsdoc": "^3.6.3",
-    "mocha": "^6.2.2",
+    "mocha": "^10.2.0",
     "mocha-simple-html-reporter": "^1.1.0",
     "nodemon": "^1.19.4",
     "nw-builder": "^3.5.7",
